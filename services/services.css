@@ -1,0 +1,123 @@
+/* General resets and typography */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.legal-header {
+  background-color: #232f36;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.legal-header h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 2.8rem;
+  letter-spacing: 0.05em;
+}
+
+.legal-header p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #ccc;
+}
+
+.legal-content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.legal-content section {
+  padding: 30px 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.legal-content section:last-child {
+  border-bottom: none;
+}
+
+.legal-content h2 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #232f36;
+}
+
+.legal-content p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
+.legal-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .legal-header h1 {
+    font-size: 2rem;
+  }
+  .legal-content {
+    margin: 20px 10px;
+    padding: 0 10px;
+  }
+  .legal-content section {
+    padding: 20px 15px;
+    line-height: 1.6;
+    flex-grow: 1; 
+    margin-bottom: 20px;
+}
+
+.btn-more-info {
+    display: inline-block;
+    background-color: black; /* Color del botón, ajusta a tu paleta */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-more-info:hover {
+    background-color: #b5b5b5;
+    color: black; 
+}
+
+
+/* --- MEDIA QUERIES PARA RESPONSIVIDAD (Actualizadas para Flexbox) --- */
+
+@media (max-width: 992px) {
+    .service-card {
+        /* Para 2 tarjetas por fila en pantallas medianas */
+        flex: 0 0 calc(50% - 15px); /* 50% para 2 tarjetas, menos ajuste para el gap */
+        max-width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        /* Para 1 tarjeta por fila en pantallas pequeñas */
+        flex: 0 0 100%; 
+        max-width: 100%;
+        margin: 0 auto; /* Centra la tarjeta individualmente si es la única en la fila */
+    }
+}
+}

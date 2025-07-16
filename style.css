@@ -1,0 +1,702 @@
+* {
+  box-sizing: border-box;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'open-sans', sans-serif, justify;
+  height: 100%;
+  background: #fff;
+}
+.hero {
+  position: relative;
+  height: 98vh;
+  background: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero2 {
+  position: relative;
+  height: 98vh;
+  background: url('https://scontent.fbjx4-1.fna.fbcdn.net/v/t1.6435-9/209741502_4319554381440218_2390451896953042980_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=tKJicf-0EPwQ7kNvwG9vma3&_nc_oc=AdnbijOvHBGBHlX9eduxCN-TvHO1gxDKHfuxjIkl1-nSugym-IW9uJKMlvZTKW3VcUk&_nc_zt=23&_nc_ht=scontent.fbjx4-1.fna&_nc_gid=PXBatXq1aEtXdOCbdG091g&oh=00_AfRZmwZs9YhvzpSqfmjnFZFLkMvCcBbgajVoh_GOkQrTlA&oe=689DFA67') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero3 {
+  position: relative;
+  height: 98vh;
+  background: url('img/3.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero4 {
+  position: relative;
+  height: 98vh;
+  background: url('img/4.jpeg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navbar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  height: 120px;
+  background: transparent;
+  transition: background 0.4s, height 0.4s;
+  z-index: 10;
+  min-width: 0;
+}
+.navbar.scrolled {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: rgba(10,10,10,0.95);
+  height: 70px;
+  transition: background 0.4s, height 0.4s;
+}
+
+.navbar-black2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  height: 120px;
+  background: #000000 !important;
+  transition: background 0.4s, height 0.4s;
+  z-index: 10;
+  min-width: 0;
+}
+
+.navbar-black2.scrolled {
+  background: #000000 !important;
+  height: 70px;
+  transition: background 0.4s, height 0.4s;
+}
+
+.navbar-black2.scrolled .logo {
+  height: 50px;
+  transform: scale(0.5);
+  transition: transform 0.4s, height 0.4s;
+}
+
+.navbar-black2.scrolled .logo-text {
+  font-size: 1.2rem;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  transition: transform 0.4s, height 0.4s;
+  height: 100px;
+}
+.navbar.scrolled .logo {
+  height: 50px;
+  transform: scale(0.5);
+  transition: transform 0.4s, height 0.4s;
+}
+.logo-img {
+  height: 100%;
+  width: auto;
+  transition: height 0.4s;
+}
+.logo-text {
+  color: #fff;
+  font-size: 2rem;
+  margin-left: 10px;
+  letter-spacing: 0.3em;
+  font-weight: 700;
+  transition: font-size 0.4s;
+}
+.navbar.scrolled .logo-text {
+  font-size: 1.2rem;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  transition: color 0.2s;
+  position: relative;
+  white-space: nowrap;
+}
+.nav-link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+  border-radius: 2px;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+.hero-title {
+  color: #fff;
+  font-size: 4rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.3);
+}
+.flag-icon {
+  height: 28px;
+  width: auto;
+  margin-left: 18px;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: transform 0.2s;
+  vertical-align: middle;
+}
+.flag-icon:hover {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.nav-flag-link {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background: none;
+  border: none;
+}
+.about-section {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  min-height: 60vh;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+.about-img {
+  flex: 1 1 50%;
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+}
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.about-content {
+  flex: 1 1 50%;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+}
+.about-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 32px;
+  color: #222;
+}
+.about-content p {
+  font-size: 2rem;
+  color: #555;
+  margin-bottom: 32px;
+  line-height: 1.2;
+}
+.about-btn {
+  display: inline-block; 
+  background: #232f36; 
+  color: #fff; 
+  padding: 18px 48px; 
+  border-radius: 10px; 
+  font-weight: bold; 
+  letter-spacing: 1px; 
+  font-size: 1.2rem; 
+  text-decoration: none; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07); 
+  transition: background 0.2s, transform 0.2s cubic-bezier(.4,0,.2,1); 
+  min-width: 200px; 
+  max-width: 320px; 
+  width: fit-content; 
+  text-align: center; 
+  padding: 18px;
+}
+.about-btn:hover {
+  background: #111;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+/* New sections styling */
+
+.why-tempus-section {
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.why-tempus-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #232f36;
+}
+
+.why-tempus-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.why-tempus-cards .card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.why-tempus-cards .card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transform: scale(1.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.why-tempus-cards .icon {
+  font-size: 3.5rem;
+  color: #3b6cca;
+  margin-bottom: 20px;
+}
+
+.why-tempus-cards p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.incorporation-solutions-section {
+  padding: 30px 20px 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.incorporation-solutions-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #232f36;
+}
+
+.incorporation-solutions-section p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.solutions-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.solution-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.solution-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.solution-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.solution-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.transfer-pricing-section {
+  padding: 60px 20px;
+  background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.transfer-pricing-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(220, 220, 220, 0.4);
+  z-index: 0;
+}
+
+.transfer-pricing-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.transfer-pricing-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.transfer-pricing-section p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pricing-options button {
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 36px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.pricing-options button:hover {
+  background: #000;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .about-img img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+  }
+  
+  .pricing-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pricing-options button {
+    width: 80%;
+    margin: 8px 0;
+  }
+}
+
+
+/*Animaciones y estilos para el divisor de viento*/
+.wind-divider {
+  width: 100%;           
+  margin: 0 auto 24px auto; 
+  overflow: hidden;
+  background: transparent;
+  z-index: 2;
+}
+.wind-divider svg {
+  display: block;
+  width: 100%;
+  height: 64px;
+  max-width: 100%;
+}
+.wind-path-divider {
+  stroke-dasharray: 1920;
+  stroke-dashoffset: 1920;
+  animation: viento-divider-move 3s linear infinite;
+}
+
+.wind-light1 {
+  animation-delay: 0.7s;
+}
+.wind-light2 {
+  animation-delay: 1.4s;
+}
+.wind-reverse {
+  animation: viento-divider-move-reverse 6s linear infinite !important;
+}
+@keyframes viento-divider-move {
+  0% { stroke-dashoffset: 1920; }
+  100% { stroke-dashoffset: -1920; }
+}
+
+
+.wind-divider-vertical {
+  height: 100vh; /* O la altura que necesites para tu contenedor vertical */
+  width: 64px;   /* El ancho de tu "divisor" vertical */
+  margin: 0 24px auto 0; /* Ajusta el margen para la disposición vertical */
+  overflow: hidden;
+  background: transparent;
+  z-index: 2;
+  /* Si deseas centrarlo verticalmente o posicionarlo de alguna forma,
+  puedes usar flexbox o grid en el padre de .wind-divider-vertical */
+}
+
+.wind-divider-vertical svg {
+  display: block;
+  width: 100%;
+  height: 100%; /* El SVG ahora ocupa el 100% de la altura de su contenedor */
+  max-height: 100%;
+}
+
+.wind-path-divider {
+  /* La longitud total de la ruta ahora es 1920 (la altura del viewBox vertical) */
+  stroke-dasharray: 1920; 
+  stroke-dashoffset: 1920;
+  animation: viento-divider-move-vertical 3s linear infinite; /* Nueva animación */
+}
+
+.wind-light1 {
+  animation-delay: 0.7s;
+}
+.wind-light2 {
+  animation-delay: 1.4s;
+}
+.wind-reverse {
+  animation: viento-divider-move-reverse-vertical 6s linear infinite !important; /* Nueva animación inversa */
+}
+
+/* Nueva animación para movimiento vertical */
+@keyframes viento-divider-move-vertical {
+  0% { stroke-dashoffset: 1920; }
+  100% { stroke-dashoffset: -1920; }
+}
+
+/* Nueva animación inversa para movimiento vertical */
+@keyframes viento-divider-move-reverse-vertical {
+  0% { stroke-dashoffset: -1920; } /* Ajusta el inicio para la dirección inversa vertical */
+  100% { stroke-dashoffset: 1920; } /* Ajusta el fin para la dirección inversa vertical */
+}
+
+.site-footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  height: 120px;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a svg {
+  fill: white;
+  width: 32px;
+  height: 32px;
+  transition: fill 0.3s ease;
+}
+
+.social-icons a:hover svg {
+  fill: #555555;
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal[aria-hidden="false"] {
+  display: flex;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 30px 40px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #232f36;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+.modal-content input[type="email"],
+.modal-content input[type="text"],
+.modal-content textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'open-sans', sans-serif;
+  resize: vertical;
+}
+
+.modal-content textarea {
+  min-height: 100px;
+}
+
+.submit-btn {
+  background-color: #232f36;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #111;
+}
+
+.hero-subtitle {
+  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.fade-out {
+  position: relative;
+  overflow: hidden;
+}
+
+.fade-out::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 9999;
+  animation: gradientWipe 0.6s ease forwards;
+  pointer-events: none;
+}
+
+/* New page enter animation for text and background */
+.page-enter {
+  animation: pageFadeIn 1s ease forwards;
+}
+
+@keyframes pageFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientWipe {
+  0% {
+    width: 0;
+    right: 0;
+  }
+  100% {
+    width: 141.42%; /* diagonal length of viewport (sqrt(100%^2 + 100%^2)) */
+    right: 100%;
+  }
+}
