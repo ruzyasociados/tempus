@@ -56,12 +56,12 @@ modal.addEventListener('keydown', (e) => {
 const contactForm = document.getElementById('contactForm');
 contactForm.addEventListener('submit', function(event) {
   event.preventDefault();
-
+  
   const isSpanish = window.location.pathname.includes('/español/');
-
+  
   const formData = new FormData(contactForm);
   const action = contactForm.getAttribute('action');
-
+  
   fetch(action, {
     method: 'POST',
     body: formData,
@@ -89,4 +89,18 @@ contactForm.addEventListener('submit', function(event) {
   }).catch(error => {
     alert(isSpanish ? 'Error al enviar el formulario. Por favor, inténtelo de nuevo.' : 'Error sending the form. Please try again.');
   });
+});
+
+
+function onEntry(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      observer.unobserve(entry.target);
+    }
+  });
+}
+var observer = new IntersectionObserver(onEntry, { threshold: 0.18 });
+document.querySelectorAll('.anim-on-scroll').forEach(el => {
+  observer.observe(el);
 });
