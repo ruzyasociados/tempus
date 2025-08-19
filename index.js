@@ -104,3 +104,82 @@ var observer = new IntersectionObserver(onEntry, { threshold: 0.18 });
 document.querySelectorAll('.anim-on-scroll').forEach(el => {
   observer.observe(el);
 });
+
+
+
+
+// --- Ventajas Popup global ---
+document.addEventListener('DOMContentLoaded', function() {
+  const ventajasBtn = document.getElementById('ventajasBtn');
+  const ventajasPopup = document.getElementById('ventajasPopup');
+  const desventajasBtn = document.getElementById('desventajasBtn');
+  const desventajasPopup = document.getElementById('desventajasPopup');
+  let isMobile = window.matchMedia('(max-width: 600px)').matches;
+
+  function showPopup(popup) {
+    popup.classList.add('active');
+    popup.focus();
+  }
+  function hidePopup(popup) {
+    popup.classList.remove('active');
+  }
+
+  function setPopupListeners(btn, popup) {
+    // Limpia listeners previos
+    if (!btn || !popup) return;
+    btn.replaceWith(btn.cloneNode(true));
+    const realBtn = document.getElementById(btn.id);
+    if (isMobile) {
+      realBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (popup.classList.contains('active')) {
+          hidePopup(popup);
+        } else {
+          // Mover el popup debajo del botón
+          const rect = realBtn.getBoundingClientRect();
+          popup.style.position = 'absolute';
+          popup.style.left = rect.left + rect.width/2 + 'px';
+          popup.style.top = (rect.bottom + window.scrollY + 12) + 'px';
+          popup.style.transform = 'translateX(-50%) translateY(0) scale(1)';
+          popup.style.zIndex = 1002;
+          showPopup(popup);
+        }
+      });
+      document.addEventListener('click', function docClick(e) {
+        if (!popup.contains(e.target) && e.target !== realBtn) {
+          hidePopup(popup);
+        }
+      }, { once: true });
+    } else {
+      realBtn.addEventListener('mouseenter', function() {
+        popup.style.position = 'fixed';
+        popup.style.left = '50%';
+        popup.style.top = '50%';
+        popup.style.transform = 'translate(-50%, -50%) scale(1)';
+        popup.style.zIndex = 9999;
+        showPopup(popup);
+      });
+      realBtn.addEventListener('focus', function() {
+        popup.style.position = 'fixed';
+        popup.style.left = '50%';
+        popup.style.top = '50%';
+        popup.style.transform = 'translate(-50%, -50%) scale(1)';
+        popup.style.zIndex = 9999;
+        showPopup(popup);
+      });
+      realBtn.addEventListener('mouseleave', function() { hidePopup(popup); });
+      popup.addEventListener('mouseenter', function() { showPopup(popup); });
+      popup.addEventListener('mouseleave', function() { hidePopup(popup); });
+    }
+  }
+
+  setPopupListeners(ventajasBtn, ventajasPopup);
+  setPopupListeners(desventajasBtn, desventajasPopup);
+  window.addEventListener('resize', function() {
+    isMobile = window.matchMedia('(max-width: 600px)').matches;
+    hidePopup(ventajasPopup);
+    hidePopup(desventajasPopup);
+    setPopupListeners(ventajasBtn, ventajasPopup);
+    setPopupListeners(desventajasBtn, desventajasPopup);
+  });
+});
