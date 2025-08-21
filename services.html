@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="../../image/png" href="../../img/Logo.png">
     <title>Tempus Consulting</title>
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/Logo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="movil.css">
     <link rel="stylesheet" href="services2.css">
@@ -15,7 +15,7 @@
     
     <div class="navbar static-navbar" id="navbar" style="position: fixed; top: 0; left: 0; width: 100%; background: rgba(10,10,10,0.95); height: 70px; display: flex; align-items: center; justify-content: space-between; padding: 0 60px; z-index: 10;">
         <div class="logo" style="height: 50px; transform: scale(0.5); transition: none;">
-            <img src="img/Logo.png" alt="Tempus Logo" class="logo-img"/>
+            <img src="../../img/Logo.png" alt="Tempus Logo" class="logo-img"/>
             <span class="logo-text" style="font-size: 1.2rem; transition: none;">TEMPUS</span>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
@@ -24,42 +24,42 @@
             <span class="hamburger-line"></span>
         </button>
         <div class="nav-links" id="nav-links">
-            <a href="index.html" class="nav-link">HOME</a>
-            <a href="services.html" class="nav-link active">SERVICES</a>
+            <a href="../index.html" class="nav-link">HOME</a>
+            <a href="#" class="nav-link active">SERVICES</a>
             <a href="#contact" class="nav-link">CONTACT</a>
-            <a href="español/servicios/servicios.html" id="mx-link" class="nav-flag-link"><img src="img/mx.webp" alt="MX" class="flag-icon"></a>
+            <a href="español/servicios/servicios.html" id="mx-link" class="nav-flag-link"><img src="../../img/mx.webp" alt="MX" class="flag-icon"></a>
         </div>
     </div><br><br><br>
     
     <section class="services-section">
-        <h2>Our Services</h2>
+        <h2>Our services</h2>
         <p class="section-description">At Tempus Consulting, we offer a full range of specialized services to meet your needs.</p>
         <div class="service-cards-container">
             <div class="service-card">
                 <div class="card-image-container">
-                    <img src="img/Tax.webp" alt="Icono de Marca Registrada" class="card-image">
+                    <img src="img/Tax.webp" alt="Icono de Defensa Legal" class="card-image">
                 </div>
-                <h3>Tax Services</h3>
-                <p>We register and protect your intellectual property, ensuring the exclusivity of your brand.</p>
-                <a href="services/Tax.html" class="btn-more-info">More information</a>
+                <h3>Transfer pricing studies (Moody's Analytics (Orbis))</h3>
+                <p>Considered by many to be the leading tool in the transfer pricing market, especially for its coverage of private companies.</p>
+                <a href="services/transfe.html" class="btn-more-info">More info</a>
             </div>
             
             <div class="service-card">
                 <div class="card-image-container">
                     <img src="img/inter.jpg" alt="Icono de Marca Registrada" class="card-image">
                 </div>
-                <h3>International</h3>
-                <p>We facilitate your expansion and global operations.</p>
-                <a href="services/Inter.html" class="btn-more-info">More information</a>
+                <h3>LSEG (formerly Refinitiv/Thomson Reuters with Eikon, now Workspace)</h3>
+                <p>A very strong competitor, traditionally dominant in the financial sector, with excellent data on publicly traded companies. It should be noted that Eikon was withdrawn on June 30, 2025, and has been replaced by LSEG Workspace, a next-generation solution.</p>
+                <a href="services/LSEG.html" class="btn-more-info">More info</a>
             </div>
             
             <div class="service-card">
                 <div class="card-image-container">
                     <img src="img/com.jpg" alt="Icono de Marca Registrada" class="card-image">
                 </div>
-                <h3>Compliance</h3>
-                <p>We ensure that your company complies with all applicable laws, regulations and ethical standards. </p>
-                <a href="services/Compliance.html" class="btn-more-info">More information</a>
+                <h3>S&P Global Market Intelligence (Capital IQ)</h3>
+                <p>A highly respected and powerful platform, particularly valued in the North American market for the quality of its financial data and analysis tools.</p>
+                <a href="services/S&P.html" class="btn-more-info">More info</a>
             </div>
         </div>
     </section>
@@ -69,12 +69,12 @@
     <div id="contactModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle" aria-modal="true" tabindex="-1">
         <div class="modal-content">
             <button class="modal-close" aria-label="Close modal">&times;</button>
-            <h2 id="modalTitle">Send us an email or fill out the following fields</h2>
+            <h2 id="modalTitle">Send us an email to: or fill in the following fields</h2>
             <form id="contactForm" action="https://formsubmit.co/sales@tempusservices.com" method="POST" novalidate>
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_next" value="" />
                 <label for="email">Mail:</label>
-                <input type="email" id="email" name="email" required placeholder="your.email@example.com" />
+                <input type="email" id="email" name="email" required placeholder="name.email@example.com" />
                 
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required placeholder="Your name" />
@@ -95,7 +95,7 @@
     
     <footer class="site-footer">
         <div class="footer-content">
-            <p>Copyright © 2023 Tempus Consulting - All rights reserved..</p><br>
+            <p>Copyright © 2023 Tempus Consulting - All rights reserved.</p><br>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/tempus-services-512a90376/" target="_blank" aria-label="LinkedIn">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 24 24" width="24" height="24">
