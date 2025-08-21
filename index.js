@@ -1,3 +1,16 @@
+// Scroll suave para anclas del navbar
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href').slice(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+});
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', function() {
   if (window.scrollY > 80) {

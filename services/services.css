@@ -83,9 +83,9 @@ body {
     line-height: 1.6;
     flex-grow: 1; 
     margin-bottom: 20px;
-}
-
-.btn-more-info {
+  }
+  
+  .btn-more-info {
     display: inline-block;
     background-color: black; /* Color del botón, ajusta a tu paleta */
     color: #ffffff;
@@ -94,30 +94,163 @@ body {
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
-}
-
-.btn-more-info:hover {
+  }
+  
+  .btn-more-info:hover {
     background-color: #b5b5b5;
     color: black; 
-}
-
-
-/* --- MEDIA QUERIES PARA RESPONSIVIDAD (Actualizadas para Flexbox) --- */
-
-@media (max-width: 992px) {
+  }
+  
+  
+  /* --- MEDIA QUERIES PARA RESPONSIVIDAD (Actualizadas para Flexbox) --- */
+  
+  @media (max-width: 992px) {
     .service-card {
-        /* Para 2 tarjetas por fila en pantallas medianas */
-        flex: 0 0 calc(50% - 15px); /* 50% para 2 tarjetas, menos ajuste para el gap */
-        max-width: calc(50% - 15px);
+      /* Para 2 tarjetas por fila en pantallas medianas */
+      flex: 0 0 calc(50% - 15px); /* 50% para 2 tarjetas, menos ajuste para el gap */
+      max-width: calc(50% - 15px);
     }
+  }
+  
+  @media (max-width: 768px) {
+    .service-card {
+      /* Para 1 tarjeta por fila en pantallas pequeñas */
+      flex: 0 0 100%; 
+      max-width: 100%;
+      margin: 0 auto; /* Centra la tarjeta individualmente si es la única en la fila */
+    }
+  }
 }
 
-@media (max-width: 768px) {
-    .service-card {
-        /* Para 1 tarjeta por fila en pantallas pequeñas */
-        flex: 0 0 100%; 
-        max-width: 100%;
-        margin: 0 auto; /* Centra la tarjeta individualmente si es la única en la fila */
-    }
+.comparativo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin: 40px 0;
 }
+.comparativo-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+  padding: 32px 24px;
+  max-width: 420px;
+  min-width: 300px;
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+.comparativo-card:hover {
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.13);
+}
+.comparativo-card h2 {
+  margin-top: 16px;
+  margin-bottom: 12px;
+  font-size: 1.5em;
+  color: #1a1a1a;
+  text-align: center;
+}
+.comparativo-card ul {
+  text-align: left;
+  margin: 0;
+  padding-left: 18px;
+}
+.comparativo-card svg {
+  margin-bottom: 8px;
+}
+.comparativo-titulo {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+.comparativo-resumen {
+  max-width: 900px;
+  margin: 0 auto 32px auto;
+  text-align: center;
+  color: #333;
+  font-size: 1.1em;
+}
+@media (max-width: 900px) {
+  .comparativo-grid { flex-direction: column; align-items: center; }
+}
+
+.expat-main {
+  max-width: 1100px;
+  margin: 140px auto 0 auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+  padding: 40px 28px 32px 28px;
+}
+.expat-title {
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 18px;
+}
+.expat-section {
+  margin-bottom: 32px;
+}
+.expat-section h2 {
+  color: #1a1a1a;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  margin-top: 24px;
+}
+.expat-list {
+  margin: 0 0 0 18px;
+  padding: 0;
+  list-style: disc inside;
+  color: #222;
+}
+.expat-barrios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 24px 0 32px 0;
+  justify-content: center;
+}
+.expat-barrio-card {
+  background: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px 0 rgba(0,0,0,0.06);
+  padding: 22px 18px;
+  min-width: 240px;
+  max-width: 340px;
+  flex: 1 1 260px;
+}
+.expat-barrio-card h3 {
+  margin-top: 0;
+  color: #1a1a1a;
+  font-size: 1.1em;
+}
+.expat-impacto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 32px 0 0 0;
+  justify-content: center;
+}
+.expat-impact-card {
+  background: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px 0 rgba(0,0,0,0.06);
+  padding: 22px 18px;
+  min-width: 260px;
+  max-width: 420px;
+  flex: 1 1 320px;
+}
+.expat-impact-card h4 {
+  margin-top: 0;
+  color: #1a1a1a;
+  font-size: 1.08em;
+}
+@media (max-width: 900px) {
+  .expat-barrios, .expat-impacto { flex-direction: column; align-items: center; }
+  .expat-main { padding: 18px 4vw; }
 }
