@@ -1,5 +1,5 @@
 /* Justificar todo el texto de la página */
-p, ul, ol, li , h3, h4, h5, h6, .justificado, .aboutus-row-text, .aboutus-hero-content, .about-content-fixed, .why-tba-content, .como-operamos-card, .incorporation-solutions-section, .transfer-pricing-section, .site-footer, .pricing-options, .footer-content {
+p, ul, ol, li , h4, h5, h6, .justificado, .aboutus-row-text, .aboutus-hero-content, .about-content-fixed, .why-tba-content, .como-operamos-card, .incorporation-solutions-section, .transfer-pricing-section, .site-footer, .pricing-options, .footer-content {
   text-align: justify;
   text-justify: inter-word;
 }
