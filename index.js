@@ -1,3 +1,60 @@
+// Carousel Circular Giro for Why Tempus Section
+document.addEventListener('DOMContentLoaded', function() {
+  const giroTrack = document.querySelector('.carousel-giro-track');
+  const giroCards = giroTrack ? giroTrack.querySelectorAll('.carousel-giro-card') : [];
+  const btnLeft = document.querySelector('.giro-left');
+  const btnRight = document.querySelector('.giro-right');
+  let current = 0;
+  let interval;
+
+  function updateGiro() {
+    giroCards.forEach((card, i) => {
+      card.classList.remove('active', 'left', 'right');
+      if (i === current) {
+        card.classList.add('active');
+      } else if (i === (current - 1 + giroCards.length) % giroCards.length) {
+        card.classList.add('left');
+      } else if (i === (current + 1) % giroCards.length) {
+        card.classList.add('right');
+      }
+    });
+  }
+
+  function nextGiro() {
+    current = (current + 1) % giroCards.length;
+    updateGiro();
+  }
+
+  function prevGiro() {
+    current = (current - 1 + giroCards.length) % giroCards.length;
+    updateGiro();
+  }
+
+  if (btnLeft && btnRight) {
+    btnLeft.addEventListener('click', function() {
+      prevGiro();
+      resetInterval();
+    });
+    btnRight.addEventListener('click', function() {
+      nextGiro();
+      resetInterval();
+    });
+  }
+
+  function startInterval() {
+    interval = setInterval(nextGiro, 3500);
+  }
+  function resetInterval() {
+    clearInterval(interval);
+    startInterval();
+  }
+
+  updateGiro();
+  startInterval();
+});
+
+
+
 // Scroll suave para anclas del navbar
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {

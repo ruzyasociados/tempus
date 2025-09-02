@@ -1,3 +1,151 @@
+/* Carousel Circular Giro for Why Tempus Section */
+.carousel-giro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 0 0 0;
+}
+.carousel-giro-track {
+  position: relative;
+  width: 420px;
+  height: 340px;
+  perspective: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-giro-card {
+  position: absolute;
+  top: 0; left: 50%;
+  width: 340px;
+  height: 320px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(45,123,229,0.09);
+  padding: 36px 32px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transform: translateX(-50%) scale(0.7) rotateY(0deg);
+  opacity: 0.5;
+  transition: transform 0.7s cubic-bezier(.4,2,.6,1), opacity 0.7s;
+  z-index: 1;
+}
+.carousel-giro-card.active {
+  transform: translateX(-50%) scale(1) rotateY(0deg);
+  opacity: 1;
+  z-index: 3;
+}
+.carousel-giro-card.left {
+  transform: translateX(-180%) scale(0.7) rotateY(30deg);
+  opacity: 0.5;
+  z-index: 2;
+}
+.carousel-giro-card.right {
+  transform: translateX(80%) scale(0.7) rotateY(-30deg);
+  opacity: 0.5;
+  z-index: 2;
+}
+.carousel-giro-btn {
+  background: #232f36;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 4;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: background 0.2s, transform 0.2s;
+}
+.carousel-giro-btn:hover {
+  background: #000;
+  transform: scale(1.08);
+}
+.giro-left {
+  left: -60px;
+}
+.giro-right {
+  right: -60px;
+}
+@media (max-width: 900px) {
+  .carousel-giro {
+    min-height: 340px;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .carousel-giro-track {
+    width: 100vw;
+    height: 320px;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: visible;
+  }
+  .carousel-giro-card {
+    width: 90vw;
+    min-width: 90vw;
+    max-width: 90vw;
+    padding: 28px 5vw 20px 5vw;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0.7) rotateY(0deg);
+    position: absolute;
+    margin: 0;
+  }
+  .carousel-giro-card.active {
+    transform: translateX(-50%) scale(1) rotateY(0deg);
+    top: 0;
+    z-index: 3;
+  }
+  .carousel-giro-card.left {
+    transform: translateX(-180%) scale(0.7) rotateY(30deg);
+    top: 0;
+    z-index: 2;
+  }
+  .carousel-giro-card.right {
+    transform: translateX(80%) scale(0.7) rotateY(-30deg);
+    top: 0;
+    z-index: 2;
+  }
+  .carousel-giro-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 78%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  .giro-left {
+    left: 8px;
+  }
+  .giro-right {
+    right: 8px;
+  }
+}
+
+
+
+
+
+
 /* Justificar todo el texto de la página */
 p, ul, ol, li , h4, h5, h6, .justificado, .aboutus-row-text, .aboutus-hero-content, .about-content-fixed, .why-tba-content, .como-operamos-card, .incorporation-solutions-section, .transfer-pricing-section, .site-footer, .pricing-options, .footer-content {
   text-align: justify;
@@ -721,7 +869,7 @@ body, html {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(220, 220, 220, 0.4);
+  background: rgba(255,255,255,0.82);
   z-index: 0;
 }
 
