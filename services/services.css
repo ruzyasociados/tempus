@@ -1,3 +1,31 @@
+/* Margen y responsividad para la sección holding-margin */
+.holding-margin {
+  margin: 32px auto;
+  padding: 32px 40px;
+  max-width: 1100px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+}
+@media (max-width: 900px) {
+  .holding-margin {
+    padding: 24px 16px;
+    margin: 24px 8px;
+  }
+}
+@media (max-width: 600px) {
+  .holding-margin {
+    padding: 16px 4vw;
+    margin: 12px 0;
+    border-radius: 10px;
+  }
+  .holding-margin h2, .holding-margin h3 {
+    font-size: 1.1em;
+  }
+  .holding-margin p {
+    font-size: 0.98em;
+  }
+}
 /* General resets and typography */
 body {
   margin: 0;
