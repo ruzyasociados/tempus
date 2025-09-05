@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="../../img/Logo.png">
+  <title>Tempus - Mexico City Overview</title>
+  <link rel="stylesheet" href="../../services/services.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../movil.css">
+</head>
+<body>
+  <div class="navbar-black2" id="navbar">
+    <div class="logo">
+      <img src="../../img/Logo.png" alt="Tempus Logo" class="logo-img"/>
+      <span class="logo-text">TEMPUS</span>
+    </div>
+    <button id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links" class="hamburger">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="../index.html" class="nav-link">INICIO</a>
+      <a href="../servicios/servicios.html" class="nav-link">SERVICIOS</a>
+      <a href="../../ofshore/offshoreEsp.html" class="nav-link active">OFFSHORE</a>
+      <a href="#contact" class="nav-link">CONTACTO</a>
+      <a href="../../ofshore/mexico.html" id="mx-link" class="nav-flag-link"><img src="../../img/EU.png" alt="EU" class="flag-icon"></a>
+    </div>
+  </div>
+  
+  <main class="expat-main">
+    <div class="expat-title">Ciudad de México: Un nexo global de cultura y oportunidades</div>
+    
+    <div class="expat-section">
+      <p>La Ciudad de México se ha consolidado como una capital vibrante y de clase mundial, cautivando a una creciente ola de residentes internacionales de Europa, Asia, América y más allá. Mucho más que un tesoro histórico, es un centro urbano dinámico donde las influencias globales se fusionan con las tradiciones locales, creando una identidad única y en evolución que resuena en todo el mundo.</p>
+    </div>
+    
+    <div class="expat-section">
+      <h2>Por qué la Ciudad de México atrae al mundo</h2>
+      <ul class="expat-list">
+        <li><b>Vida vibrante y rentable:</b> Para quienes están acostumbrados a los altos costos de ciudades como París, San Francisco o Tokio, la Ciudad de México ofrece un estilo de vida envidiable a una fracción del precio. Alquileres asequibles, restaurantes excepcionales, experiencias culturales y servicios cotidianos permiten a los residentes disfrutar de una alta calidad de vida con espacio para el lujo.</li>
+        <li><b>Un epicentro cultural:</b> Con una impresionante variedad de más de 150 museos, galerías de vanguardia y una escena musical que abarca desde el tradicional mariachi hasta la música electrónica, la Ciudad de México es una potencia cultural. Su vida nocturna, festivales y oferta teatral garantizan que siempre haya algo nuevo que experimentar.</li>
+        <li><b>Accesibilidad global:</b> Ubicada estratégicamente en América, la zona horaria de la Ciudad de México se alinea perfectamente con los horarios comerciales de Norteamérica y Europa. Su importante aeropuerto internacional, uno de los más transitados de la región, conecta la ciudad con el mundo, convirtiéndola en una base ideal para profesionales y viajeros internacionales.</li>
+        <li><b>Una mezcla cultural acogedora:</b> La diversidad de la ciudad fomenta un entorno inclusivo donde se entrelazan las culturas globales y locales. Los expatriados encuentran comunidades vibrantes de sus países de origen, además de oportunidades para conectar con las ricas tradiciones de México, lo que crea un sentido de pertenencia en un entorno cosmopolita.</li>
+      </ul>
+    </div>
+    
+    <div class="expat-section">
+      <h2>El impacto global en la Ciudad de México</h2>
+      <ul class="expat-list">
+        <li><b>Auge económico y creativo:</b> La llegada de residentes internacionales ha impulsado el crecimiento en sectores como el inmobiliario, el turismo y los servicios creativos. Desde restaurantes de fusión hasta centros tecnológicos y gimnasios boutique, las nuevas empresas están diversificando la economía y creando oportunidades tanto para locales como para recién llegados.</li>
+        <li><b>Navegando por la gentrificación:</b> La creciente popularidad de la ciudad ha disparado el precio de las propiedades, dificultando la asequibilidad para algunos residentes de larga data. En ciertos barrios, los negocios con presencia extranjera y los enclaves angloparlantes corren el riesgo de eclipsar la cultura local, lo que genera debates sobre la preservación del carácter auténtico de la ciudad.</li>
+      </ul>
+    </div>
+    
+    <div class="expat-section">
+      <h2>Una ciudad que evoluciona con el mundo</h2>
+      <p>La Ciudad de México se encuentra en una encrucijada: abraza su atractivo global y se esfuerza por mantener su esencia cultural. Su capacidad para armonizar la energía de su comunidad internacional con su arraigado patrimonio definirá su futuro como una metrópolis global verdaderamente inclusiva.</p>
+    </div>
+  </main>
+  
+  <!-- Modal Structure -->
+  <div id="contactModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle" aria-modal="true" tabindex="-1">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <h2 id="modalTitle">Envíenos un correo electrónico a: o rellene los siguientes campos</h2>
+      <form id="contactForm" action="https://formsubmit.co/sales@tempusservices.com" method="POST" novalidate>
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="" />
+        <label for="email">Correo:</label>
+        <input type="email" id="email" name="email" required placeholder="nombre.email@example.com" />
+        
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required placeholder="Tú nombre" />
+        
+        <label for="subject">Asunto:</label>
+        <input type="text" id="subject" name="subject" required placeholder="Asunto" />
+        
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" required placeholder="Tu mensaje"></textarea>
+        
+        <button type="submit" class="submit-btn">Enviar</button>
+      </form>
+    </div>
+  </div>
+  
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>Copyright © 2023 Tempus Consulting - All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script src="../../index.js"></script>
+  
+</body>
+</html>

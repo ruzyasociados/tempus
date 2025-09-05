@@ -1,0 +1,308 @@
+/* Offshore Info Modal Styles */
+.offshore-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(0,0,0,0.65);
+    transition: opacity 0.2s;
+}
+.offshore-modal[aria-hidden="false"] {
+    display: block;
+}
+.offshore-modal .modal-content {
+    background: #181a1b;
+    color: #fff;
+    margin: 4vh auto;
+    padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+    border-radius: 14px;
+    max-width: 600px;
+    width: 95vw;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+    position: relative;
+    max-height: 88vh;
+    overflow-y: auto;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+.offshore-modal h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.1rem;
+    color: #fff;
+    text-align: center;
+}
+.offshore-modal h3 {
+    font-size: 1.15rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #e0e0e0;
+}
+.offshore-modal h4 {
+    font-size: 1.05rem;
+    margin-top: 1.1rem;
+    margin-bottom: 0.4rem;
+    color: #b0b0b0;
+}
+.offshore-modal ul {
+    margin-left: 1.2em;
+    margin-bottom: 0.7em;
+    padding-left: 0.7em;
+}
+.offshore-modal ul ul {
+    margin-left: 1.1em;
+    margin-bottom: 0.3em;
+}
+.offshore-modal li {
+    margin-bottom: 0.35em;
+}
+.offshore-modal p {
+    margin-bottom: 0.7em;
+}
+.offshore-modal .modal-close {
+    position: absolute;
+    top: 0.7rem;
+    right: 1.1rem;
+    font-size: 2rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.2s;
+}
+.offshore-modal .modal-close:hover {
+    color: #ff5252;
+}
+@media (max-width: 600px) {
+    .offshore-modal .modal-content {
+        padding: 1.1rem 0.3rem 1.1rem 0.3rem;
+        font-size: 0.98rem;
+    }
+    .offshore-modal h2 {
+        font-size: 1.1rem;
+    }
+    .offshore-modal h3 {
+        font-size: 1.01rem;
+    }
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+     background: #ffffff;
+    color: #fff;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+.main-content-center {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Animación de salto para offshore-card */
+.offshore-card {
+    transition: transform 0.38s cubic-bezier(.22,1.15,.5,1), box-shadow 0.32s cubic-bezier(.22,1.15,.5,1);
+}
+.offshore-card:hover {
+    transform: translateY(-10px) scale(1.045);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.22);
+}
+.offshore-section {
+    padding: 3rem 1rem 2rem 1rem;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.offshore-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+.offshore-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "canada us"
+    "mexico mexico";
+    gap: 1.2rem;
+    width: 100%;
+    max-width: 600px;
+}
+.offshore-card.mexico {
+    grid-area: mexico;
+    grid-column: 1 / 3;
+    justify-self: center;
+    width: 50%;
+    min-width: 200px;
+}
+.offshore-card {
+    background: #181a1b;
+    color: #fff;
+    padding: 1.2rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: background 0.2s;
+}
+.offshore-card:hover {
+    background: #23272a;
+}
+.navbar {
+    background: #181a1b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1.2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 60px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo-img {
+    height: 32px;
+}
+.logo-text {
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-left: 8px;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    position: relative;
+}
+.flag-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+}
+.hamburger-line {
+    width: 24px;
+    height: 3px;
+    background: #fff;
+    margin: 3px 0;
+    border-radius: 2px;
+}
+@media (max-width: 700px) {
+    .navbar {
+        padding: 0.5rem 0.7rem;
+        height: 54px;
+    }
+    .nav-links {
+        position: fixed;
+        top: 54px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        max-width: 400px;
+        height: auto;
+        background: #181a1b;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0;
+        padding: 0;
+        display: none;
+        z-index: 100;
+        border-radius: 0 0 16px 16px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .nav-link {
+        padding: 1.2rem 0;
+        width: 100vw;
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+        border-bottom: 2px solid #222;
+        background: transparent;
+    }
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+    .nav-flag-link {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.2rem;
+    }
+    .flag-icon {
+        margin: 0 auto;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
+@media (max-width: 600px) {
+    .offshore-title {
+        font-size: 1.2rem;
+    }
+    .offshore-section {
+        padding: 1.2rem 0.2rem;
+    }
+    .offshore-grid {
+        gap: 0.7rem;
+        max-width: 98vw;
+    }
+    .offshore-card {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}
+
+/* Unified underline style for active nav item */
+.nav-link.active {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    position: relative;
+}
+.nav-link.active::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    margin-top: 6px;
+    width: 80%;
+    height: 2.5px;
+    background: #fff;
+    border-radius: 2px;
+}

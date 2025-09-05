@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="../image/png" href="../img/Logo.png">
-    <title>Soluciones personalizadas de precios de transferencia</title>
+    <link rel="stylesheet" href="off.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offshore Solutions</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../movil.css">
-    
+    <link rel="stylesheet" href="off.css">
+    <link rel="shortcut icon" href="../img/Logo.png" type="image/x-icon">    
 </head>
 <body>
     <div class="navbar static-navbar" id="navbar" style="position: fixed; top: 0; left: 0; width: 100%; background: rgba(10,10,10,0.95); height: 70px; display: flex; align-items: center; justify-content: space-between; padding: 0 60px; z-index: 10;">
         <div class="logo" style="height: 50px; transform: scale(0.5); transition: none;">
-            <img src="../img/Logo.png" alt="Tempus Logo" class="logo-img"/>
+            <img src="../../img/Logo.png" alt="Tempus Logo" class="logo-img"/>
             <span class="logo-text" style="font-size: 1.2rem; transition: none;">TEMPUS</span>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
@@ -21,22 +21,21 @@
             <span class="hamburger-line"></span>
         </button>
         <div class="nav-links" id="nav-links">
-            <a href="index.html" class="nav-link active">INICIO</a>
-            <a href="#services" class="nav-link">SERVICIOS</a>
-            <a href="../ofshore/offshoreEsp.html" class="nav-link">OFFSHORE</a>
-            <a href="#contact" class="nav-link">CONTACTANOS</a>
-            <a href="../studies/custom.html" id="mx-link" class="nav-flag-link"><img src="../img/EU.png" alt="MX" class="flag-icon"></a>
+            <a href="../español/index.html" class="nav-link">INICIO</a>
+            <a href="../español/servicios/servicios.html" class="nav-link">SERVICIOS</a>
+            <a href="#" class="nav-link active">OFFSHORE</a>
+            <a href="#contact" class="nav-link">CONTACTO</a>
+            <a href="offshore.html" id="mx-link" class="nav-flag-link"><img src="../img/EU.png" alt="MX" class="flag-icon"></a>
         </div>
-    </div><br><br>
+    </div><br><br><br>
     
-    <section class="hero4">
-        <h1 class="hero-title">Soluciones personalizadas de precios de transferencia</h1>
-        <center><h1 class="hero-subtitle" style="color: white;">
-            Nuestras soluciones personalizadas se adaptan a las necesidades específicas de su empresa y ofrecen estrategias flexibles e innovadoras en materia de precios de transferencia. Trabajamos estrechamente con usted para desarrollar soluciones que maximicen la eficiencia y el cumplimiento.
-        </h1></center>
-        <h1 class="hero-subtitle" style="color: white;">Si necesita ayuda con la documentación, las auditorías o la planificación estratégica, nuestros expertos están aquí para ayudarle en cada paso del camino.
-        </h1>
-        <a href="index.html" class="about-btn" style="margin-top: 30px; display: inline-block;">Volver al inicio</a>
+    <section class="offshore-section main-content-center">
+        <div class="offshore-title" style="color: black;">Nuevas soluciones “Offshore”</div>
+        <div class="offshore-grid">
+            <a href="../español/ofshore/canada.html" class="offshore-card" style="grid-area: canada;">Canada</a>
+            <a href="../español/ofshore/us.html" class="offshore-card" style="grid-area: us;">US</a>
+            <a href="../español/ofshore/mexico.html" class="offshore-card mexico">México</a>
+        </div>
     </section>
     
     <!-- Modal Structure -->
@@ -64,6 +63,25 @@
         </div>
     </div>
     
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../index.js"></script>
+    <script>
+        // Navbar hamburger for mobile
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+            hamburger.setAttribute('aria-expanded', navLinks.classList.contains('show'));
+        });
+        // Close nav on link click (mobile)
+        Array.from(document.querySelectorAll('.nav-link, .nav-flag-link')).forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+                hamburger.setAttribute('aria-expanded', false);
+            });
+        });
+    </script>
+    
     <footer class="site-footer">
         <div class="footer-content">
             <p>Copyright © 2023 Tempus Consulting - Todos los derechos reservados.</p><br>
@@ -83,7 +101,6 @@
             </div>
         </div>
     </footer>
-    
-    <script src="../index.js"></script>
 </body>
+<script src="off.js"></script>
 </html>

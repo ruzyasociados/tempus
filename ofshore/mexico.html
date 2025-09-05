@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="../img/Logo.png">
+  <title>Tempus - Mexico City Overview</title>
+  <link rel="stylesheet" href="../services/services.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../movil.css">
+</head>
+<body>
+  <div class="navbar-black2" id="navbar">
+    <div class="logo">
+      <img src="../img/Logo.png" alt="Tempus Logo" class="logo-img"/>
+      <span class="logo-text">TEMPUS</span>
+    </div>
+    <button id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links" class="hamburger">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="../index.html" class="nav-link">HOME</a>
+      <a href="services.html" class="nav-link">SERVICES</a>
+      <a href="../ofshore/offshore.html" class="nav-link active">OFFSHORE</a>
+      <a href="#contact" class="nav-link">CONTACT</a>
+      <a href="../español/ofshore/mexico.html" id="mx-link" class="nav-flag-link"><img src="../img/mx.webp" alt="MX" class="flag-icon"></a>
+    </div>
+  </div>
+  
+  <main class="expat-main">
+    <div class="expat-title">Mexico City: A Global Nexus of Culture and Opportunity</div>
+    
+    <div class="expat-section">
+      <p>Mexico City has solidified its place as a pulsating, world-class capital, captivating a growing wave of international residents from Europe, Asia, the Americas, and beyond. Far more than a historic treasure, it’s a dynamic urban center where global influences merge with local traditions, crafting a unique and evolving identity that resonates worldwide.</p>
+    </div>
+    
+    <div class="expat-section">
+      <h2>Why Mexico City Draws the World</h2>
+      <ul class="expat-list">
+        <li><b>Cost-Effective Vibrant Living:</b> For those accustomed to the steep costs of cities like Paris, San Francisco, or Tokyo, Mexico City offers an enviable lifestyle at a fraction of the price. Affordable rent, exceptional dining, cultural experiences, and everyday services allow residents to enjoy a high quality of life with room for indulgence.</li>
+        <li><b>A Cultural Epicenter:</b> With a staggering array of over 150 museums, cutting-edge galleries, and a music scene that ranges from traditional mariachi to electronic beats, Mexico City is a cultural powerhouse. Its nightlife, festivals, and theater offerings ensure there’s always something new to experience.</li>
+        <li><b>Global Accessibility:</b> Positioned strategically in the Americas, Mexico City’s time zone aligns seamlessly with business hours in North America and Europe. Its major international airport, one of the region’s busiest, connects the city to the world, making it a perfect base for global professionals and travelers.</li>
+        <li><b>A Welcoming Cultural Blend:</b> The city’s diversity fosters an inclusive environment where global and local cultures intertwine. Expatriates find vibrant communities from their home countries, alongside opportunities to engage with Mexico’s rich traditions, creating a sense of belonging in a cosmopolitan setting.</li>
+      </ul>
+    </div>
+    
+    <div class="expat-section">
+      <h2>The Global Impact on Mexico City</h2>
+      <ul class="expat-list">
+        <li><b>Economic and Creative Surge:</b> The arrival of international residents has sparked growth in sectors like real estate, tourism, and creative services. From fusion restaurants to tech hubs and boutique fitness studios, new ventures are diversifying the economy and creating opportunities for locals and newcomers alike.</li>
+        <li><b>Navigating Gentrification:</b> The city’s rising popularity has driven up property costs, challenging affordability for some longtime residents. In certain neighborhoods, foreign-focused businesses and English-speaking enclaves risk overshadowing local culture, prompting discussions about preserving the city’s authentic character.</li>
+      </ul>
+    </div>
+    
+    <div class="expat-section">
+      <h2>A City Evolving with the World</h2>
+      <p>Mexico City is at a crossroads, embracing its global appeal while striving to maintain its cultural soul. Its ability to harmonize the energy of its international community with its deep-rooted heritage will shape its future as a truly inclusive global metropolis.</p>
+    </div>
+  </main>
+  
+  <!-- Formulario de contacto y footer -->
+  <div id="contactModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle" aria-modal="true" tabindex="-1">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <h2 id="modalTitle">Send us an email to: or fill in the following fields</h2>
+      <form id="contactForm" action="https://formsubmit.co/sales@tempusservices.com" method="POST" novalidate>
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="" />
+        <label for="email">Mail:</label>
+        <input type="email" id="email" name="email" required placeholder="name.email@example.com" />
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Your name" />
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required placeholder="Subject" />
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required placeholder="Your name"></textarea>
+        <button type="submit" class="submit-btn">Send</button>
+      </form>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../index.js"></script>
+  
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>Copyright © 2023 Tempus Consulting - All rights reserved.</p>
+    </div>
+  </footer>
+  
+</body>
+</html>

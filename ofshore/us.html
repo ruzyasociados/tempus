@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="../img/Logo.png">
+  <title>Tempus - US Incorporation</title>
+  <link rel="stylesheet" href="../services/services.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../movil.css">
+</head>
+<body>
+  <div class="navbar-black2" id="navbar">
+    <div class="logo">
+      <img src="../img/Logo.png" alt="Tempus Logo" class="logo-img"/>
+      <span class="logo-text">TEMPUS</span>
+    </div>
+    <button id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links" class="hamburger">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="../index.html" class="nav-link">HOME</a>
+      <a href="services.html" class="nav-link">SERVICES</a>
+      <a href="../ofshore/offshore.html" class="nav-link active">OFFSHORE</a>
+      <a href="#contact" class="nav-link">CONTACT</a>
+      <a href="../español/ofshore/us.html" id="mx-link" class="nav-flag-link"><img src="../img/mx.webp" alt="MX" class="flag-icon"></a>
+    </div>
+  </div>
+  
+  <main class="expat-main">
+    <div class="expat-title">Establishing a Business in the United States</div>
+    
+    <div class="expat-section">
+      <h2>Overview of Corporations in the U.S.</h2>
+      <p><b>Understanding Corporations</b></p>
+      <ul class="expat-list">
+        <li>A corporation is a distinct legal entity established under the laws of the state in which it is incorporated. Each state has its own regulations governing the formation, management, and dissolution of corporations, with many adopting frameworks similar to the Model Business Corporation Act.</li>
+        <li>To form a corporation, articles of incorporation must be filed with the state’s Secretary of State, outlining key details such as the corporation’s structure, bylaws, and operational rules.</li>
+        <li>Most corporations adopt bylaws to define the roles, rights, and responsibilities of directors, officers, and shareholders.</li>
+        <li>States also require corporations incorporated elsewhere to register for permission to conduct business within their borders.</li>
+        <li>Federal laws, notably the Securities Act of 1933, regulate the issuance and sale of corporate securities, imposing fiduciary duties such as full disclosure to shareholders and investors.</li>
+        <li>Corporations are treated as legal "persons," granting them the ability to own property, enter contracts, sue, or be sued independently of their shareholders. This separation shields shareholders from personal liability for corporate debts and allows for easy transfer of ownership through shares.</li>
+        <li>Corporations also have perpetual existence, meaning the death or departure of shareholders or officers does not affect their legal structure.</li>
+        <li>Corporations face a unique tax structure, distinct from individuals. While they encounter "double taxation"—where both corporate profits and shareholder dividends are taxed—corporate tax rates are generally lower than individual income tax rates.</li>
+      </ul>
+    </div>
+    
+    <div class="expat-section">
+      <h2>Key Features of a Corporation</h2>
+      <ul class="expat-list">
+        <li><b>Legal Entity:</b> Authorized by state law, a corporation operates as a separate entity, capable of owning assets, entering contracts, and engaging in legal proceedings.</li>
+        <li><b>Formation:</b> Requires filing articles of incorporation with the state’s Secretary of State, detailing bylaws, shareholder rights, directors, officers, and operational guidelines.</li>
+        <li><b>Recognition:</b> Recognized as a legal business entity across all 50 U.S. states.</li>
+        <li><b>Perpetual Existence:</b> The corporation continues to exist regardless of changes in ownership or leadership.</li>
+        <li><b>Taxation:</b> Subject to corporate tax on profits, with potential additional taxation on dividends distributed to shareholders.</li>
+      </ul>
+    </div>
+    
+    <div class="expat-section">
+      <h2>Types of Corporations: C Corporation vs. S Corporation</h2>
+      <ul class="expat-list">
+        <li><b>C Corporation:</b> The default structure for all corporations upon formation. Profits are taxed at the corporate level, and dividends distributed to shareholders are taxed again at the individual level, leading to double taxation. Suitable for businesses seeking flexibility in ownership and growth.</li>
+        <li><b>S Corporation:</b> An optional tax status elected by the corporation’s director(s). It functions similarly to a partnership for tax purposes, with profits and losses passing through to shareholders based on their ownership percentage, avoiding corporate-level taxation. This status has specific eligibility requirements, such as limits on the number and type of shareholders.</li>
+      </ul>
+    </div>
+    
+    <div class="expat-section">
+      <h2>Benefits of Professional Incorporation Services</h2>
+      <p>As experienced offshore incorporation specialists, we streamline the process of setting up a U.S. corporation, enabling businesses to focus on their core operations. Our services enhance efficiency, allowing companies to handle increased workloads and boost profitability. By partnering with us, businesses can optimize costs related to infrastructure, training, equipment, utilities, and employee compensation while ensuring compliance with state and federal regulations.</p>
+    </div>
+  </main>
+  
+  <!-- Formulario de contacto y footer -->
+  <div id="contactModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle" aria-modal="true" tabindex="-1">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <h2 id="modalTitle">Send us an email to: or fill in the following fields</h2>
+      <form id="contactForm" action="https://formsubmit.co/sales@tempusservices.com" method="POST" novalidate>
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="" />
+        <label for="email">Mail:</label>
+        <input type="email" id="email" name="email" required placeholder="name.email@example.com" />
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Your name" />
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required placeholder="Subject" />
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required placeholder="Your name"></textarea>
+        <button type="submit" class="submit-btn">Send</button>
+      </form>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../index.js"></script>
+  
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>Copyright © 2023 Tempus Consulting - All rights reserved.</p>
+    </div>
+  </footer>
+  
+</body>
+</html>
